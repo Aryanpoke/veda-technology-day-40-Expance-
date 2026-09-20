@@ -1,0 +1,265 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #263238;
+    line-height: 1.7;
+}
+
+
+/* ------------------------------
+   Container
+--------------------------------*/
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* ------------------------------
+   Header
+--------------------------------*/
+
+header {
+    background: linear-gradient(135deg, #172554, #1e40af);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+
+/* ------------------------------
+   Hero Section
+--------------------------------*/
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 0;
+}
+
+.hero figure {
+    width: 45%;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+.intro {
+    flex: 1;
+}
+
+.intro h2 {
+    color: #1e40af;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    margin-bottom: 15px;
+}
+
+
+/* ------------------------------
+   Sections
+--------------------------------*/
+
+.section {
+    padding: 50px 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #172554;
+    margin-bottom: 30px;
+}
+
+.section > p {
+    margin-bottom: 15px;
+}
+
+
+/* ------------------------------
+   Achievement Cards
+--------------------------------*/
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+
+/* ------------------------------
+   Timeline
+--------------------------------*/
+
+.timeline {
+    border-left: 4px solid #1e40af;
+    padding-left: 30px;
+    margin: auto;
+    max-width: 800px;
+}
+
+.timeline-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+
+    background-color: #1e40af;
+
+    border-radius: 50%;
+
+    position: absolute;
+    left: -39px;
+    top: 25px;
+}
+
+.timeline-item span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e40af;
+}
+
+
+/* ------------------------------
+   Quote
+--------------------------------*/
+
+.quote {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+blockquote {
+    font-size: 26px;
+    font-style: italic;
+    max-width: 800px;
+    margin: auto;
+}
+
+.quote p {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* ------------------------------
+   Footer
+--------------------------------*/
+
+footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* ------------------------------
+   Responsive Design
+--------------------------------*/
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header p {
+        font-size: 17px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero figure {
+        width: 100%;
+    }
+
+    .intro h2 {
+        font-size: 25px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+
+    blockquote {
+        font-size: 21px;
+    }
+
+}
