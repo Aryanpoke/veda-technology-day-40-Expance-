@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive image carousel built with HTML, CSS and JavaScript.">
+    <title>Image Carousel | Aryan's Web Development Track</title>
+    <link rel="stylesheet" href="image.css">
+</head>
+<body>
+
+    <main class="page">
+        <header class="header">
+            <p class="eyebrow">HI ARYAN — WEB DEVELOPMENT TRACK</p>
+            <h1>Image Carousel <span>/ Slider</span></h1>
+            <p class="subtitle">
+                Explore beautiful moments with a smooth, interactive image slider.
+            </p>
+        </header>
+
+        <section class="carousel" aria-label="Image carousel">
+            <div class="slides" id="slides">
+
+                <article class="slide active">
+                    <img
+                        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=85"
+                        alt="Beautiful mountain lake surrounded by nature">
+                    <div class="slide-caption">
+                        <span>01 / NATURE</span>
+                        <h2>Discover the Beauty of Nature</h2>
+                        <p>Find peace in the world's most beautiful landscapes.</p>
+                    </div>
+                </article>
+
+                <article class="slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=85"
+                        alt="Scenic natural landscape">
+                    <div class="slide-caption">
+                        <span>02 / ADVENTURE</span>
+                        <h2>Adventure Awaits</h2>
+                        <p>Every journey brings a new story to discover.</p>
+                    </div>
+                </article>
+
+                <article class="slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=85"
+                        alt="Ocean waves rolling toward the shore">
+                    <div class="slide-caption">
+                        <span>03 / OCEAN</span>
+                        <h2>Find Your Calm</h2>
+                        <p>Let the waves carry your worries away.</p>
+                    </div>
+                </article>
+
+                <article class="slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=85"
+                        alt="Sunlight shining through a green forest">
+                    <div class="slide-caption">
+                        <span>04 / FOREST</span>
+                        <h2>Into the Wild</h2>
+                        <p>Reconnect with the wonders of the natural world.</p>
+                    </div>
+                </article>
+
+                <article class="slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=85"
+                        alt="Golden sunlight over a beautiful landscape">
+                    <div class="slide-caption">
+                        <span>05 / SUNSET</span>
+                        <h2>Chase the Golden Hour</h2>
+                        <p>Some moments deserve to last forever.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <button class="nav-btn prev" id="prevBtn"
+                    aria-label="Previous slide">&#10094;</button>
+            <button class="nav-btn next" id="nextBtn"
+                    aria-label="Next slide">&#10095;</button>
+
+            <div class="slide-counter" id="counter" aria-live="polite">
+                01 / 05
+            </div>
+        </section>
+
+        <div class="carousel-footer">
+            <div class="indicators" id="indicators"
+                 aria-label="Choose a slide">
+            </div>
+
+            <button class="play-btn" id="playBtn" aria-pressed="true">
+                <span id="playIcon">Ⅱ</span>
+                <span id="playText">Pause slideshow</span>
+            </button>
+        </div>
+
+        <footer>
+            <p>BUILT WITH <span>HTML</span> · <span>CSS</span> · <span>JAVASCRIPT</span></p>
+        </footer>
+    </main>
+
+    <script src="image.js"></script>
+</body>
+</html>

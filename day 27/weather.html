@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A weather display using static data and JavaScript."
+    >
+
+    <title>Weather Icon Display</title>
+
+    <link rel="stylesheet" href="weather.css">
+    <script src="weather.js" defer></script>
+</head>
+
+<body data-weather="default">
+    <main class="weather-card">
+        <header class="card-header">
+            <span class="badge">STATIC WEATHER DISPLAY</span>
+
+            <h1>Weather Explorer</h1>
+
+            <p>
+                Select a weather condition to explore its icon
+                and description.
+            </p>
+        </header>
+
+        <div class="form-group">
+            <label for="weatherSelect">
+                Choose a weather condition
+            </label>
+
+            <select id="weatherSelect" name="weather">
+                <option value="">-- Select weather --</option>
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="stormy">Stormy</option>
+                <option value="snowy">Snowy</option>
+                <option value="foggy">Foggy</option>
+                <option value="windy">Windy</option>
+            </select>
+        </div>
+
+        <section
+            class="weather-display"
+            aria-live="polite"
+            aria-atomic="true"
+        >
+            <div
+                id="weatherIcon"
+                class="weather-icon"
+                aria-hidden="true"
+            >🌍</div>
+
+            <h2 id="weatherTitle">Explore the Weather</h2>
+
+            <p id="weatherDescription">
+                Choose a condition from the dropdown to get started.
+            </p>
+        </section>
+
+        <button id="resetButton" class="reset-button" type="button">
+            Reset Selection
+        </button>
+
+        <footer class="card-footer">
+            Demo using static data — not a live weather forecast.
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive flashcard app for practicing web development concepts.">
+
+    <title>Flashcard App | Study Deck</title>
+
+    <link rel="stylesheet" href="flashcard.css">
+    <script src="flashcard.js" defer></script>
+</head>
+<body>
+    <main class="app-container">
+
+        <header class="app-header">
+            <span class="eyebrow">STUDY SMARTER</span>
+            <h1>Flashcard <span>App</span></h1>
+            <p>Learn, practice, and master web development.</p>
+        </header>
+
+        <section class="study-panel" aria-label="Flashcard study deck">
+
+            <div class="deck-info">
+                <div>
+                    <span class="small-label">YOUR STUDY DECK</span>
+                    <h2>Web Development</h2>
+                </div>
+
+                <span class="deck-badge">HTML · CSS · JS</span>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-labels">
+                    <span>Learning progress</span>
+                    <span id="progressText">Card 1 of 10</span>
+                </div>
+
+                <div
+                    class="progress-track"
+                    id="progressTrack"
+                    role="progressbar"
+                    aria-label="Flashcard progress"
+                    aria-valuemin="0"
+                    aria-valuemax="10"
+                    aria-valuenow="1"
+                >
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <div class="card-scene">
+                <button
+                    type="button"
+                    class="flashcard"
+                    id="flashcard"
+                    aria-label="Flashcard. Click to reveal the answer."
+                    aria-pressed="false"
+                >
+                    <span class="card-face card-front">
+                        <span class="card-top">
+                            <span class="card-category" id="questionCategory">
+                                HTML
+                            </span>
+                            <span class="card-number" id="frontNumber">
+                                01 / 10
+                            </span>
+                        </span>
+
+                        <span class="card-content">
+                            <span class="question-mark">?</span>
+                            <span class="card-label">QUESTION</span>
+                            <span class="card-question" id="questionText">
+                                What does HTML stand for?
+                            </span>
+                        </span>
+
+                        <span class="card-bottom">
+                            <span class="flip-hint">
+                                ↻ Click the card to reveal the answer
+                            </span>
+                        </span>
+                    </span>
+
+                    <span class="card-face card-back">
+                        <span class="card-top">
+                            <span class="card-category">ANSWER</span>
+                            <span class="card-number" id="backNumber">
+                                01 / 10
+                            </span>
+                        </span>
+
+                        <span class="card-content">
+                            <span class="answer-check">✓</span>
+                            <span class="card-label">CORRECT CONCEPT</span>
+                            <span class="card-answer" id="answerText">
+                                HyperText Markup Language.
+                            </span>
+                        </span>
+
+                        <span class="card-bottom">
+                            <span class="flip-hint">
+                                ↻ Click to return to the question
+                            </span>
+                        </span>
+                    </span>
+                </button>
+            </div>
+
+            <p class="keyboard-hint">
+                Tip: Click the card to flip between question and answer.
+            </p>
+
+            <div class="navigation">
+                <button type="button" id="prevButton" class="nav-button secondary">
+                    ← Previous
+                </button>
+
+                <button type="button" id="nextButton" class="nav-button primary">
+                    Next →
+                </button>
+            </div>
+
+            <div class="bottom-info">
+                <span> <span class="status-dot"></span> Static study deck</span>
+                <button type="button" id="shuffleButton" class="shuffle-button">
+                    ↻ Shuffle cards
+                </button>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            Built with HTML, CSS & JavaScript
+        </footer>
+
+    </main>
+</body>
+</html>

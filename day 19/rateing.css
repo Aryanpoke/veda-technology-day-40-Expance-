@@ -1,0 +1,190 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  BODY */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(
+            circle at top left,
+            #dbeafe,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #e0e7ff,
+            transparent 35%
+        ),
+        #f8fafc;
+    color: #172554;
+}
+
+/*  MAIN CONTAINER */
+.container {
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.12);
+}
+
+/*  TRACK TITLE */
+.track-title {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #2563eb;
+}
+
+/*  HEADER */
+h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #172554;
+}
+.subtitle {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/*  RATING CARD */
+.rating-card {
+    margin-top: 35px;
+    padding: 35px 25px;
+    border-radius: 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+.rating-card h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #334155;
+}
+
+/*  STARS CONTAINER */
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+/*  STAR BUTTON */
+.star {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #cbd5e1;
+    font-size: 45px;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+.star:hover {
+    transform: scale(1.15);
+}
+
+/* Filled star */
+.star.filled {
+    color: #f59e0b;
+}
+
+/* Hover star */
+.star.hovered {
+    color: #fbbf24;
+}
+
+/*  RATING RESULT */
+.rating-result {
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #172554;
+}
+
+#ratingNumber {
+    font-size: 32px;
+    color: #2563eb;
+}
+
+/*  RATING TEXT */
+#ratingText {
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/*  RESET BUTTON */
+.reset-btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #172554;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.reset-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+/*  FOOTER */
+footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+footer p {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/*  RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        padding: 30px 20px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .stars {
+        gap: 2px;
+    }
+    .star {
+        width: 48px;
+        height: 48px;
+        font-size: 38px;
+    }
+    .rating-card {
+        padding: 30px 15px;
+    }
+}

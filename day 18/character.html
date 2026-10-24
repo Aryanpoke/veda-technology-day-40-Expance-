@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A responsive character, word and sentence counter built using HTML, CSS and JavaScript.">
+    <title>Character and Word Counter</title>
+    <link rel="stylesheet" href="character.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <span class="track-title">HI ARYAN — WEB DEVELOPMENT TRACK</span>
+            <h1>Character and Word Counter</h1>
+            <p>
+                Count characters, words and sentences as you type.
+            </p>
+        </header>
+        <!-- Text Input -->
+        <section class="text-section">
+            <label for="textInput">Enter your text</label>
+            <textarea
+                id="textInput"
+                placeholder="Start typing something here..."
+                spellcheck="true"
+            ></textarea>
+        </section>
+        <!-- Statistics -->
+        <section class="stats">
+            <div class="stat-card">
+                <span class="stat-icon">Aa</span>
+                <div>
+                    <h2 id="characterCount">0</h2>
+                    <p>Characters</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">W</span>
+                <div>
+                    <h2 id="wordCount">0</h2>
+                    <p>Words</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">.</span>
+                <div>
+                    <h2 id="sentenceCount">0</h2>
+                    <p>Sentences</p>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <p>Live text analysis using HTML, CSS & JavaScript</p>
+        </footer>
+    </div>
+    <script src="character.js"></script>
+</body>
+</html>

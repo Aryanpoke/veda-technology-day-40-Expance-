@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A simple in-memory To-Do List built using HTML, CSS and JavaScript.">
+    <title>Simple To-Do List</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Simple To-Do List</h1>
+            <p>Manage your daily tasks easily</p>
+        </header>
+        <!-- Add Task -->
+        <section class="task-input">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+                autocomplete="off"
+            >
+            <button id="addTaskBtn">
+                Add Task
+            </button>
+        </section>
+        <!-- Task Information -->
+        <div class="task-info">
+            <span id="taskCount">0 Tasks</span>
+            <button id="clearAllBtn" class="clear-btn">
+                Clear All
+            </button>
+        </div>
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+        <!-- Empty Message -->
+        <div id="emptyMessage" class="empty-message">
+            <div class="empty-icon">✓</div>
+            <h2>No Tasks Yet</h2>
+            <p>Add your first task to get started.</p>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p>Simple To-Do List • HTML • CSS • JavaScript</p>
+        </footer>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>

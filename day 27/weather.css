@@ -1,0 +1,253 @@
+/* General reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #172033;
+    --muted: #526176;
+    --primary: #4338ca;
+    --primary-hover: #3730a3;
+    --border: #cbd5e1;
+}
+
+/* Default background */
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 28px 16px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+
+    background: linear-gradient(135deg, #dbeafe, #ede9fe);
+}
+
+/* Background for each weather condition */
+body[data-weather="sunny"] {
+    background: linear-gradient(135deg, #fef3c7, #fb923c);
+}
+
+body[data-weather="cloudy"] {
+    background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+}
+
+body[data-weather="rainy"] {
+    background: linear-gradient(135deg, #bfdbfe, #475569);
+}
+
+body[data-weather="stormy"] {
+    background: linear-gradient(135deg, #64748b, #1e1b4b);
+}
+
+body[data-weather="snowy"] {
+    background: linear-gradient(135deg, #f0f9ff, #a5d8f3);
+}
+
+body[data-weather="foggy"] {
+    background: linear-gradient(135deg, #e5e7eb, #9ca3af);
+}
+
+body[data-weather="windy"] {
+    background: linear-gradient(135deg, #ccfbf1, #38bdf8);
+}
+
+/* Main card */
+.weather-card {
+    width: 100%;
+    max-width: 460px;
+
+    padding: 34px;
+
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 24px;
+
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2);
+}
+
+/* Heading */
+.card-header {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+
+    margin-bottom: 14px;
+    padding: 7px 12px;
+
+    border-radius: 999px;
+    background: #eef2ff;
+
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card-header h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.card-header p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Dropdown */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 13px 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: #f8fafc;
+    color: var(--text);
+
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group select:focus-visible {
+    border-color: var(--primary);
+    outline: 3px solid #c7d2fe;
+    outline-offset: 3px;
+}
+
+/* Weather result */
+.weather-display {
+    min-height: 255px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px 18px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    background: #f8fafc;
+
+    text-align: center;
+}
+
+.weather-icon {
+    margin-bottom: 14px;
+
+    font-size: 78px;
+    line-height: 1.2;
+}
+
+.weather-display h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.weather-display p {
+    max-width: 320px;
+
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Reset button */
+.reset-button {
+    width: 100%;
+
+    margin-top: 22px;
+    padding: 13px 16px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--primary);
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.reset-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.reset-button:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 4px;
+}
+
+/* Footer */
+.card-footer {
+    margin-top: 20px;
+
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    .weather-card {
+        padding: 26px 20px;
+        border-radius: 18px;
+    }
+
+    .card-header h1 {
+        font-size: 26px;
+    }
+
+    .weather-icon {
+        font-size: 68px;
+    }
+
+    .weather-display h2 {
+        font-size: 22px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .reset-button {
+        transition: none;
+    }
+
+    .reset-button:hover {
+        transform: none;
+    }
+}

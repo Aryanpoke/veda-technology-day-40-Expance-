@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temperature Converter</title>
+
+    <link rel="stylesheet" href="tempereature.css">
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <div class="converter">
+
+            <!-- Heading -->
+            <h1>Temperature Converter</h1>
+            <p class="subtitle">
+                Convert temperature between Celsius, Fahrenheit and Kelvin
+            </p>
+            <!-- Conversion Selection -->
+            <div class="conversion-box">
+                <!-- From -->
+                <div class="unit-box">
+                    <label for="fromUnit">From</label>
+                    <select id="fromUnit">
+                        <option value="celsius">
+                            Celsius (°C)
+                        </option>
+                        <option value="fahrenheit">
+                            Fahrenheit (°F)
+                        </option>
+                        <option value="kelvin">
+                            Kelvin (K)
+                        </option>
+                    </select>
+                </div>
+                <!-- Arrow -->
+                <div class="arrow">
+                    →
+                </div>
+                <!-- To -->
+                <div class="unit-box">
+                    <label for="toUnit">To</label>
+                    <select id="toUnit">
+                        <option value="celsius">
+                            Celsius (°C)
+                        </option>
+                        <option value="fahrenheit" selected>
+                            Fahrenheit (°F)
+                        </option>
+                        <option value="kelvin">
+                            Kelvin (K)
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <!-- Input -->
+            <div class="input-section">
+
+                <label for="temperature">
+                    Enter Temperature
+                </label>
+                <input
+                    type="number"
+                    id="temperature"
+                    placeholder="Enter value..."
+                    step="any"
+                >
+            </div>
+            <!-- Convert Button -->
+            <button id="convertBtn">
+                Convert
+            </button>
+            <!-- Result -->
+            <div class="result-section">
+                <p class="result-title">
+                    Result
+                </p>
+               <div id="result">               
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tempereature.js"></script>
+</body>
+</html>

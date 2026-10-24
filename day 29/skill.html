@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Animated skill progress bars built using HTML, CSS and JavaScript.">
+
+    <title>Animated Skills | Progress Dashboard</title>
+
+    <link rel="stylesheet" href="skill.css">
+    <script src="skill.js" defer></script>
+</head>
+<body>
+
+    <main class="skills-container">
+
+        <header class="page-header">
+            <span class="eyebrow">MY EXPERTISE</span>
+            <h1>Animated <span>Skill Bars</span></h1>
+            <p>Skills, progress, and continuous improvement.</p>
+        </header>
+
+        <section class="skills-card" id="skillsSection">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">TECHNICAL PROFILE</span>
+                    <h2>My Development Skills</h2>
+                </div>
+
+                <span class="live-badge">
+                    <span class="status-dot"></span>
+                    Skill Overview
+                </span>
+            </div>
+
+            <p class="section-description">
+                A visual overview of my technical skills and learning progress.
+            </p>
+
+            <div class="skills-list">
+
+                <article class="skill-item">
+                    <div class="skill-info">
+                        <div class="skill-name">
+                            <span class="skill-icon html-icon">5</span>
+                            <span>HTML5</span>
+                        </div>
+                        <span class="percentage" data-target="95">0%</span>
+                    </div>
+
+                    <div class="progress-track">
+                        <div class="progress-fill html-fill" data-progress="95"></div>
+                    </div>
+                    <p class="skill-note">Semantic structure and accessible markup</p>
+                </article>
+
+                <article class="skill-item">
+                    <div class="skill-info">
+                        <div class="skill-name">
+                            <span class="skill-icon css-icon">#</span>
+                            <span>CSS3</span>
+                        </div>
+                        <span class="percentage" data-target="85">0%</span>
+                    </div>
+
+                    <div class="progress-track">
+                        <div class="progress-fill css-fill" data-progress="85"></div>
+                    </div>
+                    <p class="skill-note">Responsive layouts, animations, and styling</p>
+                </article>
+
+                <article class="skill-item">
+                    <div class="skill-info">
+                        <div class="skill-name">
+                            <span class="skill-icon js-icon">JS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <span class="percentage" data-target="75">0%</span>
+                    </div>
+
+                    <div class="progress-track">
+                        <div class="progress-fill js-fill" data-progress="75"></div>
+                    </div>
+                    <p class="skill-note">DOM manipulation and interactive interfaces</p>
+                </article>
+
+                <article class="skill-item">
+                    <div class="skill-info">
+                        <div class="skill-name">
+                            <span class="skill-icon python-icon">Py</span>
+                            <span>Python</span>
+                        </div>
+                        <span class="percentage" data-target="70">0%</span>
+                    </div>
+
+                    <div class="progress-track">
+                        <div class="progress-fill python-fill" data-progress="70"></div>
+                    </div>
+                    <p class="skill-note">Programming fundamentals and problem solving</p>
+                </article>
+
+                <article class="skill-item">
+                    <div class="skill-info">
+                        <div class="skill-name">
+                            <span class="skill-icon git-icon">G</span>
+                            <span>Git & GitHub</span>
+                        </div>
+                        <span class="percentage" data-target="80">0%</span>
+                    </div>
+
+                    <div class="progress-track">
+                        <div class="progress-fill git-fill" data-progress="80"></div>
+                    </div>
+                    <p class="skill-note">Version control and project management</p>
+                </article>
+
+            </div>
+
+            <div class="card-footer">
+                <span>Keep learning. Keep building.</span>
+                <button type="button" id="replayButton">
+                    ↻ Replay Animation
+                </button>
+            </div>
+
+        </section>
+
+        <footer class="page-footer">
+            Built with HTML, CSS & JavaScript
+        </footer>
+
+    </main>
+
+</body>
+</html>

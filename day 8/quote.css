@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: url("storm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #172554;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.quote-box {
+    background: white;
+
+    padding: 45px 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.12);
+
+    border: 1px solid #e2e8f0;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #1e3a8a;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.quote-content {
+    position: relative;
+
+    background: #f8fafc;
+
+    border-left: 5px solid #2563eb;
+
+    padding: 35px 30px;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+}
+
+.quote-icon {
+    font-size: 65px;
+    color: #2563eb;
+
+    line-height: 40px;
+
+    margin-bottom: 15px;
+}
+
+#quote {
+    font-size: 25px;
+    line-height: 1.6;
+
+    color: #334155;
+
+    margin-bottom: 20px;
+}
+
+#author {
+    font-size: 17px;
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#newQuoteBtn {
+    background: #2563eb;
+    color: white;
+}
+
+#newQuoteBtn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+#copyBtn {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+#copyBtn:hover {
+    background: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+#shareBtn {
+    background: #16a34a;
+    color: white;
+}
+
+#shareBtn:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    .quote-box {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    #quote {
+        font-size: 20px;
+    }
+
+    .quote-content {
+        padding: 25px 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}

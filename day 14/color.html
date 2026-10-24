@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A random color palette generator built using HTML, CSS and JavaScript.">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="color.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <p class="tag">COLOR TOOL</p>
+            <h1>Color Palette Generator</h1>
+            <p class="subtitle">
+                Generate beautiful random color palettes and copy HEX codes instantly.
+            </p>
+        </header>
+        <section class="palette" id="palette">
+            <!-- Color Card 1 -->
+            <div class="color-card" onclick="copyColor(this)">
+                <div class="color-preview"></div>
+                <div class="color-info">
+                    <span class="hex-code">#000000</span>
+                    <span class="copy-text">Click to copy</span>
+                </div>
+            </div>
+            <!-- Color Card 2 -->
+            <div class="color-card" onclick="copyColor(this)">
+                <div class="color-preview"></div>
+                <div class="color-info">
+                    <span class="hex-code">#000000</span>
+                    <span class="copy-text">Click to copy</span>
+                </div>
+            </div>
+            <!-- Color Card 3 -->
+            <div class="color-card" onclick="copyColor(this)">
+                <div class="color-preview"></div>
+                <div class="color-info">
+                    <span class="hex-code">#000000</span>
+                    <span class="copy-text">Click to copy</span>
+                </div>
+            </div>
+            <!-- Color Card 4 -->
+            <div class="color-card" onclick="copyColor(this)">
+                <div class="color-preview"></div>
+                <div class="color-info">
+                    <span class="hex-code">#000000</span>
+                    <span class="copy-text">Click to copy</span>
+                </div>
+            </div>
+            <!-- Color Card 5 -->
+            <div class="color-card" onclick="copyColor(this)">
+                <div class="color-preview"></div>
+                <div class="color-info">
+                    <span class="hex-code">#000000</span>
+                    <span class="copy-text">Click to copy</span>
+                </div>
+            </div>
+        </section>
+        <button class="generate-btn" onclick="generatePalette()">
+            <span>↻</span>
+            Generate New Palette
+        </button>
+        <p class="instruction">
+            Click on any color to copy its HEX code
+        </p>
+    </main>
+    <div class="toast" id="toast">
+        ✓ Color copied to clipboard!
+    </div>
+    <script src="color.js"></script>
+</body>
+</html>

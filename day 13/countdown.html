@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A responsive countdown timer built using HTML, CSS and JavaScript.">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="countdown.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Countdown Timer</h1>
+            <p>Count down to your special date</p>
+        </header>
+        <!-- Countdown -->
+        <section class="timer">
+            <div class="time-box">
+                <span id="days" class="number">00</span>
+                <span class="label">Days</span>
+            </div>
+            <div class="colon">:</div>
+            <div class="time-box">
+                <span id="hours" class="number">00</span>
+                <span class="label">Hours</span>
+            </div>
+            <div class="colon">:</div>
+            <div class="time-box">
+                <span id="minutes" class="number">00</span>
+                <span class="label">Minutes</span>
+            </div>
+            <div class="colon">:</div>
+            <div class="time-box">
+                <span id="seconds" class="number">00</span>
+                <span class="label">Seconds</span>
+            </div>
+        </section>
+        <!-- Target Date -->
+        <section class="target-section">
+            <h2>Countdown Target</h2>
+            <div class="date-box">
+                October 31, 2026
+            </div>
+        </section>
+        <!-- Message -->
+        <p id="message" class="message">
+            ⏳ Countdown is running...
+        </p>
+    </div>
+    <script src="countdown.js"></script>
+</body>
+</html>

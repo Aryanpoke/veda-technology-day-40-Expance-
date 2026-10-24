@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive tip calculator built with HTML, CSS and JavaScript.">
+    <title>Tip Calculator | Aryan's Web Development Track</title>
+    <link rel="stylesheet" href="tip.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="page-header">
+            <p class="eyebrow">HI ARYAN — WEB DEVELOPMENT TRACK</p>
+            <h1>Tip <span>Calculator</span></h1>
+            <p class="subtitle">Split the bill. Share the tip. Keep it simple.</p>
+        </header>
+
+        <section class="calculator">
+            <div class="calculator-left">
+                <div class="section-heading">
+                    <span class="step">01</span>
+                    <h2>Enter your bill</h2>
+                </div>
+
+                <label for="billAmount">Bill amount (₹)</label>
+                <div class="input-wrapper">
+                    <span class="currency">₹</span>
+                    <input type="number" id="billAmount"
+                           placeholder="0.00" min="0" step="0.01"
+                           value="1000">
+                </div>
+
+                <div class="section-heading tip-heading">
+                    <span class="step">02</span>
+                    <h2>Select tip percentage</h2>
+                </div>
+
+                <div class="tip-options" id="tipOptions">
+                    <button type="button" class="tip-btn" data-tip="5">5%</button>
+                    <button type="button" class="tip-btn" data-tip="10">10%</button>
+                    <button type="button" class="tip-btn active" data-tip="15">15%</button>
+                    <button type="button" class="tip-btn" data-tip="20">20%</button>
+                    <button type="button" class="tip-btn" data-tip="25">25%</button>
+                </div>
+
+                <label for="customTip">Custom tip (%)</label>
+                <input type="number" id="customTip"
+                       class="custom-input" placeholder="Enter custom percentage"
+                       min="0" max="100" step="0.1">
+
+                <div class="section-heading people-heading">
+                    <span class="step">03</span>
+                    <h2>Split the bill</h2>
+                </div>
+
+                <label for="people">Number of people</label>
+                <div class="people-control">
+                    <button type="button" id="decreasePeople"
+                            aria-label="Decrease number of people">−</button>
+                    <input type="number" id="people" min="1" step="1" value="2">
+                    <button type="button" id="increasePeople"
+                            aria-label="Increase number of people">+</button>
+                </div>
+
+                <p id="errorMessage" class="error-message" role="alert"></p>
+
+                <button type="button" id="resetBtn" class="reset-btn">
+                    ↻ Reset calculator
+                </button>
+            </div>
+
+            <div class="calculator-right">
+                <div class="result-header">
+                    <span class="result-icon">₹</span>
+                    <p>YOUR TOTAL</p>
+                </div>
+
+                <p class="result-label">Total bill including tip</p>
+                <h2 class="total-amount" id="totalAmount">₹1,150.00</h2>
+
+                <div class="result-divider"></div>
+
+                <div class="result-row">
+                    <div>
+                        <p class="result-label">Tip amount</p>
+                        <p class="result-description">Total tip for everyone</p>
+                    </div>
+                    <strong id="tipAmount">₹150.00</strong>
+                </div>
+
+                <div class="result-row">
+                    <div>
+                        <p class="result-label">Bill per person</p>
+                        <p class="result-description">Without tip</p>
+                    </div>
+                    <strong id="billPerPerson">₹500.00</strong>
+                </div>
+
+                <div class="result-row">
+                    <div>
+                        <p class="result-label">Tip per person</p>
+                        <p class="result-description">Your share of the tip</p>
+                    </div>
+                    <strong id="tipPerPerson">₹75.00</strong>
+                </div>
+
+                <div class="per-person-card">
+                    <p>Each person pays</p>
+                    <h2 id="totalPerPerson">₹575.00</h2>
+                    <span id="splitText">Split between 2 people</span>
+                </div>
+
+                <p class="note">✨ A fair split makes every meal better.</p>
+            </div>
+        </section>
+
+        <footer>
+            BUILT WITH <span>HTML</span> · <span>CSS</span> · <span>JAVASCRIPT</span>
+        </footer>
+    </main>
+
+    <script src="tip.js"></script>
+</body>
+</html>
